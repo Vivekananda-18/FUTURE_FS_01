@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My portfolio</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exile&family=Montaga&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      
+    <!-- CSS File -->
+<link rel="stylesheet" href="{{ url_for('static', filename='styless.css') }}">
+
+
+</head>
+<body>
+
+   <header id="top">
+  <div class="header-content">
+    <h1>WELCOME TO MY PORTFOLIO</h1>
+    <div class="button-group">
+      <a href="#About"><button class="button1">ABOUT</button></a>
+      <a href="#Skills"><button class="button1">SKILLS</button></a>
+      <a href="#Projects"><button class="button1">PROJECTS</button></a>
+      <a href="#Contact"><button class="button1">CONTACT</button></a>
+    </div>
+  </div>
+</header>
+
+ 
+    <main>
+
+     <section class="centersection" id="About">
+        <h1>ABOUT ME</h1> 
+        <img class="image" src="{{ url_for('static', filename='mypic.jpg') }}" alt="My Photo">
+        <br>
+        <div class="para">
+            <p>I am K.Vivekananda Joshi, a web developer passionate about both frontend and backend technologies.
+        Currently pursuing my B.tech in <strong>Anil Neerukonda Institute Of Technology and Sciences.</strong>.
+        When I'm not coding, you'll find me drawing, playing guitar, hitting the gym, or cooking in the kitchen. 
+         I also enjoy sports and anything that fuels my creativity and energy.</p>
+
+        </div>        
+     </section>
+        
+
+     <section class="centersection" id="Skills">
+        <h1>MY SKILLS</h1>
+        <ol class="skilss">
+            <li>Python </li>
+            <li>HTML </li>
+            <li>CSS (Intermediate)</li>
+            <li>javascript (Intermediate)</li>
+            <li>MySQL (basics)</li>
+        </ol>
+     </section>
+
+
+     <section class="centersection" id="Projects">
+        <h1>MY PROJECTS</h1>
+        <table class="projectss" border="2">
+            <tr>
+                <th>PROJECT</th>
+                <th>DESCRIPTION</th>
+            </tr>
+                
+            <tr>
+                <td>Portfolio website</td>
+                <td>I have built a Portfolio website using HTML,CSS,python(flask)</td>
+            </tr>
+
+            <tr>
+                <td>Simple Caluclator</td>
+                <td>I have built Simple Caluclator using Python</td>
+            </tr>
+             <tr>
+                <td>weather dashboard</td>
+                <td>I have built a weather app using HTML,CSS,Java script.</td>
+            </tr>
+        </table>
+     </section>
+    
+        
+<section class="formsection" id="Contact">
+    <form action="/submit" method="POST">
+        <h1>CONTACT ME</h1>
+        <h2>Feel free to get in touch with me, by filling the below form:</h2>
+
+        <div class="form-row">
+            <label for="name">NAME:</label>
+            <input class="input1" type="text" id="name" name="name" required placeholder="Your Name">
+        </div>
+
+        <div class="form-row">
+            <label for="email">EMAIL:</label>
+            <input class="input1" type="email" id="email" name="email" required placeholder="Your Email">
+        </div>
+
+        <div class="form-row">
+            <label for="bio">BIO:</label>
+            <input class="input1" id="bio" name="bio" rows="4" required placeholder="Tell me about yourself">
+        </div>
+
+        <button class="sub" type="submit">Submit</button>
+    </form>
+</section>
+
+    </main>
+
+    <footer>
+    <p>THANK YOU!!</p>
+    </footer>
+    
+    
+</body>
+</html>
